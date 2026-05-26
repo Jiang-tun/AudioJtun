@@ -1,6 +1,6 @@
 # AudioJtun
 
-一款支持多平台视频解析播放的 Android 应用。
+一款支持多平台视频解析播放的 Android 应用。根据AudioVisual windows桌面应用复刻的App
 
 ## 功能特性
 
