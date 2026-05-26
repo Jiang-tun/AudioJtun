@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="#0d1117">
+
+    <LinearLayout
+        android:id="@+id/sidebar"
+        android:layout_width="280dp"
+        android:layout_height="match_parent"
+        android:background="#161b22"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/sidebarHeader"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#21262d"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingLeft="16dp">
+
+            <View
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:background="#e94560"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="4dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AudioVisual"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#fff"/>
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="平台导航:"
+                    android:textSize="13sp"
+                    android:textColor="#8b949e"
+                    android:layout_marginTop="8dp"/>
+
+                <Spinner
+                    android:id="@+id/platformSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="#21262d"
+                    android:layout_marginTop="8dp"
+                    style="@style/DarkSpinner"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="解析接口:"
+                    android:textSize="13sp"
+                    android:textColor="#8b949e"
+                    android:layout_marginTop="16dp"/>
+
+                <Spinner
+                    android:id="@+id/parserSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="#21262d"
+                    android:layout_marginTop="8dp"
+                    style="@style/DarkSpinner"/>
+
+                <Button
+                    android:id="@+id/parseButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:text="PARSE!"
+                    android:textColor="#fff"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:background="#e94560"
+                    android:layout_marginTop="16dp"/>
+
+                <Button
+                    android:id="@+id/dramaButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:text="美韩日剧"
+                    android:textColor="#000"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:background="#00d9ff"
+                    android:layout_marginTop="8dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#21262d"
+                    android:orientation="vertical"
+                    android:padding="12dp"
+                    android:layout_marginTop="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="💡 使用提示"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#fff"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1. 在地址栏粘贴视频链接"
+                        android:textSize="11sp"
+                        android:textColor="#8b949e"
+                        android:layout_marginTop="6dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2. 选择解析接口"
+                        android:textSize="11sp"
+                        android:textColor="#8b949e"
+                        android:layout_marginTop="3dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3. 点击 PARSE! 解析播放"
+                        android:textSize="11sp"
+                        android:textColor="#8b949e"
+                        android:layout_marginTop="3dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4. 解析失败请更换接口"
+                        android:textSize="11sp"
+                        android:textColor="#8b949e"
+                        android:layout_marginTop="3dp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <Button
+                android:id="@+id/updateButton"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="检查更新"
+                android:textColor="#fff"
+                android:background="#21262d"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GitHub Repository"
+                android:textSize="11sp"
+                android:textColor="#6e7681"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/contentArea"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:background="#0d1117">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#161b22"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp">
+
+            <Button
+                android:id="@+id/toggleSidebarButton"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:text="☰"
+                android:textColor="#fff"
+                android:background="#6e7681"/>
+
+            <Button
+                android:id="@+id/backButton"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:text="←"
+                android:textColor="#fff"
+                android:background="#21262d"
+                android:layout_marginLeft="8dp"/>
+
+            <Button
+                android:id="@+id/forwardButton"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:text="→"
+                android:textColor="#fff"
+                android:background="#21262d"
+                android:layout_marginLeft="4dp"/>
+
+            <Button
+                android:id="@+id/homeButton"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:text="⌂"
+                android:textColor="#fff"
+                android:background="#21262d"
+                android:layout_marginLeft="4dp"/>
+
+            <EditText
+                android:id="@+id/urlInput"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:hint="输入网址..."
+                android:textColor="#fff"
+                android:textColorHint="#6e7681"
+                android:background="#21262d"
+                android:paddingLeft="12dp"
+                android:layout_marginLeft="8dp"/>
+
+            <Button
+                android:id="@+id/goButton"
+                android:layout_width="56dp"
+                android:layout_height="36dp"
+                android:text="GO"
+                android:textColor="#fff"
+                android:background="#6e7681"
+                android:layout_marginLeft="8dp"/>
+
+            <Button
+                android:id="@+id/reloadButton"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:text="↻"
+                android:textColor="#fff"
+                android:background="#21262d"
+                android:layout_marginLeft="4dp"/>
+        </LinearLayout>
+
+        <WebView
+            android:id="@+id/webView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:indeterminate="false"
+            android:progressDrawable="@drawable/progress_bar"/>
+    </LinearLayout>
+</LinearLayout>
